@@ -1,3 +1,8 @@
 spring:
   application:
     name: CodePilot
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai.openai:
+    api-key: ${OPENAI-KEY}
