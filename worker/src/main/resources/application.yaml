@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: codepilot-worker
+  main:
+    web-application-type: none
+    banner-mode: off
+
+  # Activities write to the same database the api reads from.
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/codepilot}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Temporal Spring Boot starter: connect to the server and auto-discover the
+  # @WorkflowImpl / @ActivityImpl beans in the package below.
+  temporal:
+    connection:
+      target: ${TEMPORAL_TARGET:127.0.0.1:7233}
+    namespace: ${TEMPORAL_NAMESPACE:default}
+    workers-auto-discovery:
+      packages:
+        - com.example.worker.temporal

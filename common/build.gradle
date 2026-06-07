@@ -1,3 +1,6 @@
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    api 'org.springframework.boot:spring-boot-starter-data-jpa'
+    api 'org.springframework.boot:spring-boot-starter-validation'
+    implementation ("io.temporal:temporal-spring-boot-starter:1.31.0")
+    runtimeOnly  'org.postgresql:postgresql'
 }

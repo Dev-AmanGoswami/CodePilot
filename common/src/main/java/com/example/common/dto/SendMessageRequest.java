@@ -6,9 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Data @AllArgsConstructor @NoArgsConstructor
 public class SendMessageRequest {
     private UUID sessionId;
     private String content;

@@ -1,4 +1,9 @@
 package com.example.common.model;
 
-public class TaskRunStatus {
+public enum TaskRunStatus {
+    PENDING,
+    THINKING,
+    RUNNING,
+    DONE,
+    ERROR
 }

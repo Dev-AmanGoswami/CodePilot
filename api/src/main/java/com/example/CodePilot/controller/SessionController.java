@@ -66,9 +66,9 @@ public class SessionController {
         return ResponseEntity.ok(messageService.getMessages(id));
     }
 
-    @GetMapping(value = "/{id}/status", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public SseEmitter streamStatus(@PathVariable UUID id){
-        SseEmitter sseEmitter = new SseEmitter(300_000L);
-
-    }
+//    @GetMapping(value = "/{id}/status", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+//    public SseEmitter streamStatus(@PathVariable UUID id){
+//        SseEmitter sseEmitter = new SseEmitter(300_000L);
+//
+//    }
 }
