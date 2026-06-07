@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot'
+}
+
+dependencies {
+	implementation project(':common')
+	implementation project(':temporal-config')
+
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+	implementation 'org.springaicommunity:spring-ai-agent-utils:0.5.0'
+
+	implementation 'io.github.cdimascio:dotenv-java:3.2.0'
+
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+tasks.named('bootRun') {
+	standardInput = System.in
+}
