@@ -1,16 +1,12 @@
-package com.example.worker.temporal;
+package com.example.worker.activity;
 
 import com.example.common.dto.AgentStatusEvent;
-import com.example.common.dto.MessageResponse;
 import com.example.common.temporal.AgentActivities;
-import com.example.common.temporal.CodingAgentWorkflow;
 import io.temporal.activity.ActivityOptions;
 import io.temporal.spring.boot.WorkflowImpl;
 import io.temporal.workflow.Workflow;
 
 import java.time.Duration;
-import java.util.List;
-import java.util.UUID;
 
 
 @WorkflowImpl(taskQueues = "coding-agent-task-queue")

@@ -5,7 +5,8 @@ plugins {
 dependencies {
 	implementation project(':common')
 	implementation project(':temporal-config')
-
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+	implementation 'org.springaicommunity:spring-ai-agent-utils:0.5.0'
 	implementation 'io.temporal:temporal-spring-boot-starter:1.31.0'
 }
